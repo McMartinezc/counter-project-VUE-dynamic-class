@@ -7,9 +7,16 @@ import {
 
 createApp({
   setup() {
-    const message = ref("Hello Vue!");
+    const counter = ref(0);
+
+    const updateCount =(click)=>{
+      counter.value = counter.value + click;
+    }
+  
     return {
-      message,
+      updateCount,
+      counter,
+  
     };
   },
 }).mount("#app");
