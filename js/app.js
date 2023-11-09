@@ -12,10 +12,15 @@ createApp({
     const updateCount =(click)=>{
       counter.value = counter.value + click;
     }
+
+    const getColor = (counter) =>{
+      return counter === 0 ? 'gray' : (counter > 0 ? 'green' : 'red')
+    }
   
     return {
       updateCount,
       counter,
+      getColor
   
     };
   },
